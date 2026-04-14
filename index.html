@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학교 시험 관리 대시보드</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="time-display" id="currentTime">10:45:32</div>
+    <div class="date-display" id="currentDate">2024년 11월 15일 (금)</div>
+  </div>
+  
+  <div class="selector-row">
+    <div class="grade-selector">
+      <button class="grade-btn active" data-grade="1" onclick="selectGrade(1)">1학년</button>
+      <button class="grade-btn" data-grade="2" onclick="selectGrade(2)">2학년</button>
+      <button class="grade-btn" data-grade="3" onclick="selectGrade(3)">3학년</button>
+    </div>
+
+    <div class="day-selector">
+      <button class="day-btn active" data-day="1" onclick="selectDay(1)">1일차</button>
+      <button class="day-btn" data-day="2" onclick="selectDay(2)">2일차</button>
+      <button class="day-btn" data-day="3" onclick="selectDay(3)">3일차</button>
+      <button class="day-btn" data-day="4" onclick="selectDay(4)">4일차</button>
+    </div>
+  </div>
+  
+  <div class="attendance-cards">
+    <div class="attendance-card" data-key="attendance">
+      <div class="attendance-label">출석</div>
+      <div class="attendance-card-body">
+        <span class="attendance-number" id="attendanceCount">28</span>
+        <input class="attendance-input" type="number" min="0" aria-label="출석 입력값">
+      </div>
+    </div>
+    <div class="attendance-card" data-key="lateness">
+      <div class="attendance-label">지각</div>
+      <div class="attendance-card-body">
+        <span class="attendance-number" id="latenessCount">2</span>
+        <input class="attendance-input" type="number" min="0" aria-label="지각 입력값">
+      </div>
+    </div>
+    <div class="attendance-card" data-key="absence">
+      <div class="attendance-label">결시</div>
+      <div class="attendance-card-body">
+        <span class="attendance-number" id="absenceCount">1</span>
+        <input class="attendance-input" type="number" min="0" aria-label="결시 입력값">
+      </div>
+    </div>
+    <div class="attendance-card" data-key="total">
+      <div class="attendance-label">전체</div>
+      <div class="attendance-card-body">
+        <span class="attendance-number" id="totalCount">31</span>
+        <input class="attendance-input" type="number" min="0" aria-label="전체 입력값">
+      </div>
+    </div>
+  </div>
+  
+  <div class="exam-schedule" id="scheduleContainer"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
