@@ -1,12 +1,12 @@
-// 시험 데이터
+// ?�험 ?�이??
 const examData = {
   1: {
     1: [
       {
         period: 1,
         subject: '국어',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 28,
         lateness: 2,
         absence: 1,
@@ -16,7 +16,7 @@ const examData = {
         period: 2,
         subject: '수학',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 28,
         lateness: 2,
         absence: 1,
@@ -25,7 +25,7 @@ const examData = {
       {
         period: 3,
         subject: '영어',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 28,
         lateness: 2,
@@ -37,8 +37,8 @@ const examData = {
       {
         period: 1,
         subject: '과학',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 29,
         lateness: 1,
         absence: 1,
@@ -48,7 +48,7 @@ const examData = {
         period: 2,
         subject: '사회',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 29,
         lateness: 1,
         absence: 1,
@@ -57,7 +57,7 @@ const examData = {
       {
         period: 3,
         subject: '한국사',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 29,
         lateness: 1,
@@ -69,8 +69,8 @@ const examData = {
       {
         period: 1,
         subject: '물리',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 27,
         lateness: 3,
         absence: 1,
@@ -80,7 +80,7 @@ const examData = {
         period: 2,
         subject: '화학',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 27,
         lateness: 3,
         absence: 1,
@@ -89,7 +89,7 @@ const examData = {
       {
         period: 3,
         subject: '생물',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 27,
         lateness: 3,
@@ -101,8 +101,8 @@ const examData = {
       {
         period: 1,
         subject: '기하',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 30,
         lateness: 0,
         absence: 1,
@@ -112,7 +112,7 @@ const examData = {
         period: 2,
         subject: '미적분',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 30,
         lateness: 0,
         absence: 1,
@@ -121,7 +121,7 @@ const examData = {
       {
         period: 3,
         subject: '확률과통계',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 30,
         lateness: 0,
@@ -135,8 +135,8 @@ const examData = {
       {
         period: 1,
         subject: '정보',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 27,
         lateness: 1,
         absence: 2,
@@ -146,7 +146,7 @@ const examData = {
         period: 2,
         subject: '영어',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 27,
         lateness: 1,
         absence: 2,
@@ -155,7 +155,7 @@ const examData = {
       {
         period: 3,
         subject: '체육',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 27,
         lateness: 1,
@@ -167,8 +167,8 @@ const examData = {
       {
         period: 1,
         subject: '세계사',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 28,
         lateness: 0,
         absence: 1,
@@ -178,7 +178,7 @@ const examData = {
         period: 2,
         subject: '물리',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 28,
         lateness: 0,
         absence: 1,
@@ -187,7 +187,7 @@ const examData = {
       {
         period: 3,
         subject: '국어',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 28,
         lateness: 0,
@@ -199,8 +199,8 @@ const examData = {
       {
         period: 1,
         subject: '철학',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 26,
         lateness: 2,
         absence: 2,
@@ -210,7 +210,7 @@ const examData = {
         period: 2,
         subject: '미술',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 26,
         lateness: 2,
         absence: 2,
@@ -219,7 +219,7 @@ const examData = {
       {
         period: 3,
         subject: '한국사',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 26,
         lateness: 2,
@@ -231,8 +231,8 @@ const examData = {
       {
         period: 1,
         subject: '지구과학',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 29,
         lateness: 0,
         absence: 1,
@@ -242,7 +242,7 @@ const examData = {
         period: 2,
         subject: '경제',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 29,
         lateness: 0,
         absence: 1,
@@ -251,7 +251,7 @@ const examData = {
       {
         period: 3,
         subject: '한문',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 29,
         lateness: 0,
@@ -265,8 +265,8 @@ const examData = {
       {
         period: 1,
         subject: '문학',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 30,
         lateness: 0,
         absence: 1,
@@ -276,7 +276,7 @@ const examData = {
         period: 2,
         subject: '수학',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 30,
         lateness: 0,
         absence: 1,
@@ -284,8 +284,8 @@ const examData = {
       },
       {
         period: 3,
-        subject: '영어',
-        startTime: '11:20',
+        subject: '정보',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 30,
         lateness: 0,
@@ -297,8 +297,8 @@ const examData = {
       {
         period: 1,
         subject: '물리',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 28,
         lateness: 1,
         absence: 1,
@@ -308,7 +308,7 @@ const examData = {
         period: 2,
         subject: '화학',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 28,
         lateness: 1,
         absence: 1,
@@ -317,7 +317,7 @@ const examData = {
       {
         period: 3,
         subject: '생물',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 28,
         lateness: 1,
@@ -329,8 +329,8 @@ const examData = {
       {
         period: 1,
         subject: '기하',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 29,
         lateness: 0,
         absence: 1,
@@ -340,7 +340,7 @@ const examData = {
         period: 2,
         subject: '미적분',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 29,
         lateness: 0,
         absence: 1,
@@ -349,7 +349,7 @@ const examData = {
       {
         period: 3,
         subject: '확률과통계',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 29,
         lateness: 0,
@@ -361,8 +361,8 @@ const examData = {
       {
         period: 1,
         subject: '경제',
-        startTime: '09:00',
-        endTime: '10:00',
+        startTime: '08:50',
+        endTime: '09:40',
         attendance: 30,
         lateness: 0,
         absence: 1,
@@ -372,7 +372,7 @@ const examData = {
         period: 2,
         subject: '지리',
         startTime: '10:10',
-        endTime: '11:10',
+        endTime: '11:00',
         attendance: 30,
         lateness: 0,
         absence: 1,
@@ -381,7 +381,7 @@ const examData = {
       {
         period: 3,
         subject: '정보',
-        startTime: '11:20',
+        startTime: '11:30',
         endTime: '12:20',
         attendance: 30,
         lateness: 0,
@@ -415,22 +415,51 @@ function createDefaultAttendanceState() {
 }
 createDefaultAttendanceState();
 
-// 현재 시간을 기준으로 시험 상태 판단
+// ?�재 ?�간??기�??�로 ?�험 ?�태 ?�단
 function getStatus(period, startTime, endTime) {
   const now = new Date();
   const [startHour, startMin] = startTime.split(':').map(Number);
-  const [endHour, endMin] = endTime.split(':').map(Number);
+  const startSeconds = startHour * 3600 + startMin * 60;
+  const targetEndSeconds = startSeconds + 50 * 60;
+  const nowSeconds = getSecondsFromMidnight(now);
 
-  const currentMinutes = now.getHours() * 60 + now.getMinutes();
-  const startMinutes = startHour * 60 + startMin;
-  const endMinutes = endHour * 60 + endMin;
-
-  if (currentMinutes < startMinutes) {
+  if (nowSeconds < startSeconds) {
     return { status: 'upcoming', label: '예정' };
-  } else if (currentMinutes >= startMinutes && currentMinutes <= endMinutes) {
+  } else if (nowSeconds <= targetEndSeconds) {
     return { status: 'proceeding', label: '진행중' };
   } else {
     return { status: 'completed', label: '완료' };
+  }
+}
+
+function getSecondsFromMidnight(date) {
+  return date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
+}
+
+function getTimeProgress(startTime, endTime) {
+  const now = new Date();
+  const nowSeconds = getSecondsFromMidnight(now);
+  const [startHour, startMin] = startTime.split(':').map(Number);
+  const startSeconds = startHour * 3600 + startMin * 60;
+  const targetEndSeconds = startSeconds + 50 * 60;
+  const totalSeconds = 50 * 60;
+  const elapsedSeconds = Math.min(Math.max(0, nowSeconds - startSeconds), totalSeconds);
+
+  return {
+    progressPercent: Math.round((elapsedSeconds / totalSeconds) * 100),
+    secondsUntilStart: Math.max(0, startSeconds - nowSeconds),
+    secondsRemaining: Math.max(0, targetEndSeconds - nowSeconds)
+  };
+}
+
+function formatCountdown(totalSeconds) {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  if (hours > 0) {
+    return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  } else {
+    return `${minutes}:${String(seconds).padStart(2, '0')}`;
   }
 }
 
@@ -442,7 +471,7 @@ function selectGrade(grade) {
   renderSchedule(selectedDay);
 }
 
-// 날짜 선택 이벤트
+// ?�짜 ?�택 ?�벤??
 function selectDay(day) {
   selectedDay = day;
   document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
@@ -458,7 +487,7 @@ function getProgressClass(progress) {
   return 'progress-pending';
 }
 
-// 시험 일정 렌더링
+// ?�험 ?�정 ?�더�?
 function renderSchedule(day) {
   const schedule = examData[selectedGrade][day];
   const container = document.getElementById('scheduleContainer');
@@ -466,12 +495,22 @@ function renderSchedule(day) {
 
   schedule.forEach(exam => {
     const statusInfo = getStatus(exam.period, exam.startTime, exam.endTime);
+    const timeProgress = getTimeProgress(exam.startTime, exam.endTime);
+    const progressPercent = timeProgress.progressPercent;
     const statusBadgeClass = `status-${statusInfo.status}`;
-    const progressPercent = exam.maxProgress;
     const progressClass = getProgressClass(progressPercent);
+    const progressLabel = statusInfo.status === 'proceeding'
+      ? `진행 ${progressPercent}% · 남은 ${formatCountdown(timeProgress.secondsRemaining)}`
+      : statusInfo.status === 'upcoming'
+      ? `시작까지 ${formatCountdown(timeProgress.secondsUntilStart)}`
+      : '완료';
+
+    const progressBarLabel = statusInfo.status === 'completed'
+      ? '완료'
+      : '50분';
 
     const periodDiv = document.createElement('div');
-    periodDiv.className = `exam-period ${progressClass}`;
+    periodDiv.className = `exam-period ${progressClass} period-bg-${exam.period}`;
 
     periodDiv.innerHTML = `
       <div class="period-header">
@@ -480,7 +519,7 @@ function renderSchedule(day) {
           <div class="period-subject">${exam.subject}</div>
           <div class="period-meta">
             <span class="period-time">${exam.startTime} ~ ${exam.endTime}</span>
-            <span class="progress-pill">${progressPercent}% 진행</span>
+            <span class="progress-pill">${progressLabel}</span>
           </div>
         </div>
         <span class="status-badge ${statusBadgeClass}">${statusInfo.label}</span>
@@ -488,6 +527,7 @@ function renderSchedule(day) {
       <div class="period-progress">
         <div class="progress-track">
           <div class="progress-fill ${progressClass}" style="width: ${progressPercent}%"></div>
+          <div class="progress-text">${progressBarLabel}</div>
         </div>
       </div>
     `;
@@ -498,7 +538,7 @@ function renderSchedule(day) {
   updateAttendance(day);
 }
 
-// 출석 현황 업데이트
+// 출석 ?�황 ?�데?�트
 function updateAttendance(day) {
   const summary = attendanceState[selectedGrade][day];
   document.getElementById('attendanceCount').textContent = summary.attendance;
@@ -566,7 +606,7 @@ function setupAttendanceCardEditing() {
   });
 }
 
-// 시간 업데이트
+// ?�간 ?�데?�트
 function updateTime() {
   const now = new Date();
   const timeStr = now.toLocaleTimeString('ko-KR', { hour12: false });
@@ -581,10 +621,13 @@ function updateTime() {
   document.getElementById('currentDate').textContent = dateStr;
 }
 
-// 초기화
+// 초기??
 window.addEventListener('DOMContentLoaded', function() {
-  updateTime();
-  setInterval(updateTime, 1000);
   renderSchedule(1);
+  updateTime();
+  setInterval(() => {
+    updateTime();
+    renderSchedule(selectedDay);
+  }, 1000);
   setupAttendanceCardEditing();
 });
