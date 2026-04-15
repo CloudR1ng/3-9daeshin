@@ -4,7 +4,7 @@ const examData = {
     1: [
       {
         period: 1,
-        subject: '국어',
+        subject: '한국사1',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 28,
@@ -14,7 +14,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '수학',
+        subject: '자습',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 28,
@@ -24,7 +24,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '영어',
+        subject: '공통국어1',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 28,
@@ -36,7 +36,7 @@ const examData = {
     2: [
       {
         period: 1,
-        subject: '과학',
+        subject: '자습',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 29,
@@ -46,7 +46,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '사회',
+        subject: '공통수학1',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 29,
@@ -56,7 +56,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '한국사',
+        subject: '자습',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 29,
@@ -68,7 +68,7 @@ const examData = {
     3: [
       {
         period: 1,
-        subject: '물리',
+        subject: '통합과학1',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 27,
@@ -78,7 +78,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '화학',
+        subject: '자습',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 27,
@@ -88,7 +88,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '생물',
+        subject: '공통영어1',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 27,
@@ -100,7 +100,7 @@ const examData = {
     4: [
       {
         period: 1,
-        subject: '기하',
+        subject: '독서 토론과 글쓰기',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 30,
@@ -110,7 +110,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '미적분',
+        subject: '자습',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 30,
@@ -120,7 +120,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '확률과통계',
+        subject: '통합사회1',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 30,
@@ -134,7 +134,7 @@ const examData = {
     1: [
       {
         period: 1,
-        subject: '정보',
+        subject: '자습',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 27,
@@ -144,7 +144,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '영어',
+        subject: '대수',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 27,
@@ -154,7 +154,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '체육',
+        subject: '사회와 문화',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 27,
@@ -166,7 +166,7 @@ const examData = {
     2: [
       {
         period: 1,
-        subject: '세계사',
+        subject: '문학',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 28,
@@ -176,7 +176,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '물리',
+        subject: '세계사',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 28,
@@ -186,7 +186,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '국어',
+        subject: '물리학',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 28,
@@ -198,7 +198,7 @@ const examData = {
     3: [
       {
         period: 1,
-        subject: '철학',
+        subject: '한국지리 탐구',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 26,
@@ -208,7 +208,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '미술',
+        subject: '미적분 I',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 26,
@@ -218,7 +218,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '한국사',
+        subject: '생명과학',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 26,
@@ -230,7 +230,7 @@ const examData = {
     4: [
       {
         period: 1,
-        subject: '지구과학',
+        subject: '정치',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 29,
@@ -240,7 +240,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '경제',
+        subject: '영어 I',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 29,
@@ -250,7 +250,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '한문',
+        subject: '화학',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 29,
@@ -264,7 +264,7 @@ const examData = {
     1: [
       {
         period: 1,
-        subject: '문학',
+        subject: '자습',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 30,
@@ -274,7 +274,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '수학',
+        subject: '화법과 작문',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 30,
@@ -284,7 +284,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '정보',
+        subject: '자습',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 30,
@@ -296,7 +296,7 @@ const examData = {
     2: [
       {
         period: 1,
-        subject: '물리',
+        subject: '언어와 매체',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 28,
@@ -306,7 +306,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '화학',
+        subject: '자습',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 28,
@@ -316,7 +316,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '생물',
+        subject: '고급 수학 I',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 28,
@@ -328,7 +328,7 @@ const examData = {
     3: [
       {
         period: 1,
-        subject: '기하',
+        subject: '자습',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 29,
@@ -348,7 +348,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '확률과통계',
+        subject: '자습',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 29,
@@ -360,7 +360,7 @@ const examData = {
     4: [
       {
         period: 1,
-        subject: '경제',
+        subject: '윤리와 사상',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 30,
@@ -370,7 +370,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '지리',
+        subject: '영어 독해와 작문',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 30,
@@ -380,7 +380,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '정보',
+        subject: '자습',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 30,
