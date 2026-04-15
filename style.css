@@ -246,7 +246,7 @@ body {
 }
 
 .period-time {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   color: #3d4f6e;
   white-space: nowrap;
@@ -505,7 +505,7 @@ body {
   }
 
   .period-subject {
-    font-size: 16px;
+    font-size: 30px;
   }
 
   .attendance-number {
