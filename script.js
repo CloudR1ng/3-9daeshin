@@ -503,11 +503,15 @@ function renderSchedule(day) {
       ? `진행 ${progressPercent}% · 남은 ${formatCountdown(timeProgress.secondsRemaining)}`
       : statusInfo.status === 'upcoming'
       ? `시작까지 ${formatCountdown(timeProgress.secondsUntilStart)}`
-      : '완료';
+      : '';
 
     const progressBarLabel = statusInfo.status === 'completed'
       ? '완료'
       : '50분';
+
+    const progressPillHtml = progressLabel
+      ? `<span class="progress-pill">${progressLabel}</span>`
+      : '';
 
     const periodDiv = document.createElement('div');
     periodDiv.className = `exam-period ${progressClass} period-bg-${exam.period}`;
@@ -519,7 +523,7 @@ function renderSchedule(day) {
           <div class="period-subject">${exam.subject}</div>
           <div class="period-meta">
             <span class="period-time">${exam.startTime} ~ ${exam.endTime}</span>
-            <span class="progress-pill">${progressLabel}</span>
+            ${progressPillHtml}
           </div>
         </div>
         <span class="status-badge ${statusBadgeClass}">${statusInfo.label}</span>
