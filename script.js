@@ -1,3 +1,59 @@
+const grade3NationalAssessmentSchedule = [
+  {
+    period: 1,
+    subject: '국어',
+    startTime: '08:40',
+    endTime: '10:00',
+    attendance: 30,
+    lateness: 0,
+    absence: 1
+  },
+  {
+    period: 2,
+    subject: '수학',
+    startTime: '10:20',
+    endTime: '12:00',
+    attendance: 30,
+    lateness: 0,
+    absence: 1
+  },
+  {
+    period: 3,
+    subject: '영어',
+    startTime: '13:30',
+    endTime: '14:40',
+    attendance: 30,
+    lateness: 0,
+    absence: 1
+  },
+  {
+    period: 4,
+    subject: '한국사 / 탐구',
+    startTime: '15:00',
+    endTime: '16:47',
+    attendance: 30,
+    lateness: 0,
+    absence: 1,
+    segments: [
+      {
+        subject: '한국사',
+        startTime: '15:00',
+        endTime: '15:30'
+      },
+      {
+        subject: '탐구1',
+        startTime: '15:45',
+        endTime: '16:15'
+      },
+      {
+        subject: '탐구2',
+        startTime: '16:17',
+        endTime: '16:47'
+      }
+    ]
+  }
+];
+
 // ?�험 ?�이??
 const examData = {
   1: {
@@ -261,134 +317,10 @@ const examData = {
     ]
   },
   3: {
-    1: [
-      {
-        period: 1,
-        subject: '자습',
-        startTime: '08:50',
-        endTime: '09:40',
-        attendance: 30,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 100
-      },
-      {
-        period: 2,
-        subject: '화법과 작문',
-        startTime: '10:10',
-        endTime: '11:00',
-        attendance: 30,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 85
-      },
-      {
-        period: 3,
-        subject: '자습',
-        startTime: '11:30',
-        endTime: '12:20',
-        attendance: 30,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 0
-      }
-    ],
-    2: [
-      {
-        period: 1,
-        subject: '언어와 매체',
-        startTime: '08:50',
-        endTime: '09:40',
-        attendance: 28,
-        lateness: 1,
-        absence: 1,
-        maxProgress: 100
-      },
-      {
-        period: 2,
-        subject: '자습',
-        startTime: '10:10',
-        endTime: '11:00',
-        attendance: 28,
-        lateness: 1,
-        absence: 1,
-        maxProgress: 60
-      },
-      {
-        period: 3,
-        subject: '고급 수학 I',
-        startTime: '11:30',
-        endTime: '12:20',
-        attendance: 28,
-        lateness: 1,
-        absence: 1,
-        maxProgress: 0
-      }
-    ],
-    3: [
-      {
-        period: 1,
-        subject: '자습',
-        startTime: '08:50',
-        endTime: '09:40',
-        attendance: 29,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 100
-      },
-      {
-        period: 2,
-        subject: '미적분',
-        startTime: '10:10',
-        endTime: '11:00',
-        attendance: 29,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 78
-      },
-      {
-        period: 3,
-        subject: '자습',
-        startTime: '11:30',
-        endTime: '12:20',
-        attendance: 29,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 0
-      }
-    ],
-    4: [
-      {
-        period: 1,
-        subject: '윤리와 사상',
-        startTime: '08:50',
-        endTime: '09:40',
-        attendance: 30,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 100
-      },
-      {
-        period: 2,
-        subject: '영어 독해와 작문',
-        startTime: '10:10',
-        endTime: '11:00',
-        attendance: 30,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 72
-      },
-      {
-        period: 3,
-        subject: '자습',
-        startTime: '11:30',
-        endTime: '12:20',
-        attendance: 30,
-        lateness: 0,
-        absence: 1,
-        maxProgress: 0
-      }
-    ]
+    1: grade3NationalAssessmentSchedule,
+    2: grade3NationalAssessmentSchedule,
+    3: grade3NationalAssessmentSchedule,
+    4: grade3NationalAssessmentSchedule
   }
 };
 
@@ -418,14 +350,12 @@ createDefaultAttendanceState();
 // ?�재 ?�간??기�??�로 ?�험 ?�태 ?�단
 function getStatus(period, startTime, endTime) {
   const now = new Date();
-  const [startHour, startMin] = startTime.split(':').map(Number);
-  const startSeconds = startHour * 3600 + startMin * 60;
-  const targetEndSeconds = startSeconds + 50 * 60;
+  const { startSeconds, endSeconds } = getTimeWindow(startTime, endTime);
   const nowSeconds = getSecondsFromMidnight(now);
 
   if (nowSeconds < startSeconds) {
     return { status: 'upcoming', label: '예정' };
-  } else if (nowSeconds <= targetEndSeconds) {
+  } else if (nowSeconds <= endSeconds) {
     return { status: 'proceeding', label: '진행중' };
   } else {
     return { status: 'completed', label: '완료' };
@@ -436,19 +366,34 @@ function getSecondsFromMidnight(date) {
   return date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
 }
 
+function getTimeWindow(startTime, endTime) {
+  const [startHour, startMin] = startTime.split(':').map(Number);
+  const [endHour, endMin] = endTime.split(':').map(Number);
+  const startSeconds = startHour * 3600 + startMin * 60;
+  let endSeconds = endHour * 3600 + endMin * 60;
+
+  if (endSeconds <= startSeconds) {
+    endSeconds += 24 * 3600;
+  }
+
+  return {
+    startSeconds,
+    endSeconds,
+    totalSeconds: endSeconds - startSeconds
+  };
+}
+
 function getTimeProgress(startTime, endTime) {
   const now = new Date();
   const nowSeconds = getSecondsFromMidnight(now);
-  const [startHour, startMin] = startTime.split(':').map(Number);
-  const startSeconds = startHour * 3600 + startMin * 60;
-  const targetEndSeconds = startSeconds + 50 * 60;
-  const totalSeconds = 50 * 60;
+  const { startSeconds, endSeconds, totalSeconds } = getTimeWindow(startTime, endTime);
   const elapsedSeconds = Math.min(Math.max(0, nowSeconds - startSeconds), totalSeconds);
 
   return {
     progressPercent: Math.round((elapsedSeconds / totalSeconds) * 100),
     secondsUntilStart: Math.max(0, startSeconds - nowSeconds),
-    secondsRemaining: Math.max(0, targetEndSeconds - nowSeconds)
+    secondsRemaining: Math.max(0, endSeconds - nowSeconds),
+    totalSeconds
   };
 }
 
@@ -487,11 +432,92 @@ function getProgressClass(progress) {
   return 'progress-pending';
 }
 
+function createProgressHtml(progressPercent, progressClass, label, extraClass = '') {
+  return `
+    <div class="progress-track ${extraClass}">
+      <div class="progress-fill ${progressClass}" style="width: ${progressPercent}%"></div>
+      <div class="progress-text">${label}</div>
+    </div>
+  `;
+}
+
+function createSegmentTimelineHtml(segments) {
+  return `
+    <div class="period-segments">
+      ${segments.map(segment => {
+        const segmentProgress = getTimeProgress(segment.startTime, segment.endTime);
+        const segmentProgressClass = getProgressClass(segmentProgress.progressPercent);
+        const segmentDurationLabel = `${Math.round(segmentProgress.totalSeconds / 60)}분`;
+
+        return `
+          <div class="period-segment ${segmentProgressClass}">
+            <div class="segment-subject">${segment.subject}</div>
+            <div class="segment-time">${segment.startTime} ~ ${segment.endTime}</div>
+            ${createProgressHtml(segmentProgress.progressPercent, segmentProgressClass, segmentDurationLabel, 'segment-progress')}
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+function createAssessmentProgress(startTime, endTime) {
+  const timeProgress = getTimeProgress(startTime, endTime);
+  const progressClass = getProgressClass(timeProgress.progressPercent);
+  const durationLabel = `${Math.round(timeProgress.totalSeconds / 60)}분`;
+
+  return createProgressHtml(timeProgress.progressPercent, progressClass, durationLabel, 'assessment-progress');
+}
+
+function createAssessmentRow(exam) {
+  const durationHtml = createAssessmentProgress(exam.startTime, exam.endTime);
+
+  if (Array.isArray(exam.segments) && exam.segments.length > 0) {
+    return `
+      <section class="assessment-row assessment-row-split period-bg-${exam.period}">
+        <div class="assessment-period">${exam.period}교시</div>
+        <div class="assessment-segments">
+          ${exam.segments.map(segment => `
+            <div class="assessment-segment">
+              <div class="assessment-subject">${segment.subject}</div>
+              <div class="assessment-time">${segment.startTime} ~ ${segment.endTime}</div>
+              ${createAssessmentProgress(segment.startTime, segment.endTime)}
+            </div>
+          `).join('')}
+        </div>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="assessment-row period-bg-${exam.period}">
+      <div class="assessment-period">${exam.period}교시</div>
+      <div class="assessment-main">
+        <div class="assessment-subject">${exam.subject}</div>
+        <div class="assessment-time">${exam.startTime} ~ ${exam.endTime}</div>
+      </div>
+      <div class="assessment-duration">${durationHtml}</div>
+    </section>
+  `;
+}
+
+function renderGrade3AssessmentSchedule(schedule, container) {
+  container.className = 'exam-schedule assessment-schedule';
+  container.innerHTML = schedule.map(createAssessmentRow).join('');
+}
+
 // ?�험 ?�정 ?�더�?
 function renderSchedule(day) {
   const schedule = examData[selectedGrade][day];
   const container = document.getElementById('scheduleContainer');
+  container.className = 'exam-schedule';
   container.innerHTML = '';
+
+  if (selectedGrade === 3) {
+    renderGrade3AssessmentSchedule(schedule, container);
+    updateAttendance(day);
+    return;
+  }
 
   schedule.forEach(exam => {
     const statusInfo = getStatus(exam.period, exam.startTime, exam.endTime);
@@ -505,16 +531,23 @@ function renderSchedule(day) {
       ? `시작까지 ${formatCountdown(timeProgress.secondsUntilStart)}`
       : '';
 
-    const progressBarLabel = statusInfo.status === 'completed'
-      ? '완료'
-      : '50분';
+    const durationLabel = `${Math.round(timeProgress.totalSeconds / 60)}분`;
+    const progressBarLabel = durationLabel;
 
     const progressPillHtml = progressLabel
       ? `<span class="progress-pill">${progressLabel}</span>`
       : '';
+    const hasSegments = Array.isArray(exam.segments) && exam.segments.length > 0;
+    const bodyHtml = hasSegments
+      ? createSegmentTimelineHtml(exam.segments)
+      : `
+        <div class="period-progress">
+          ${createProgressHtml(progressPercent, progressClass, progressBarLabel)}
+        </div>
+      `;
 
     const periodDiv = document.createElement('div');
-    periodDiv.className = `exam-period ${progressClass} period-bg-${exam.period}`;
+    periodDiv.className = `exam-period ${progressClass} period-bg-${exam.period}${hasSegments ? ' period-with-segments' : ''}`;
 
     periodDiv.innerHTML = `
       <div class="period-header">
@@ -528,12 +561,7 @@ function renderSchedule(day) {
         </div>
         <span class="status-badge ${statusBadgeClass}">${statusInfo.label}</span>
       </div>
-      <div class="period-progress">
-        <div class="progress-track">
-          <div class="progress-fill ${progressClass}" style="width: ${progressPercent}%"></div>
-          <div class="progress-text">${progressBarLabel}</div>
-        </div>
-      </div>
+      ${bodyHtml}
     `;
 
     container.appendChild(periodDiv);
