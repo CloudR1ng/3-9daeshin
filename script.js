@@ -733,12 +733,6 @@ function renderSchedule(day) {
   container.className = 'exam-schedule';
   container.innerHTML = '';
 
-  if (selectedGrade === 3) {
-    renderGrade3AssessmentSchedule(schedule, container);
-    updateAttendance(day);
-    return;
-  }
-
   schedule.forEach(exam => {
     const statusInfo = getStatus(exam.period, exam.startTime, exam.endTime);
     const timeProgress = getTimeProgress(exam.startTime, exam.endTime);
