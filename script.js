@@ -54,13 +54,13 @@ const grade3NationalAssessmentSchedule = [
   }
 ];
 
-// ?�험 ?�이??
+// 2026학년도 1학기 기말고사 시간표
 const examData = {
   1: {
     1: [
       {
         period: 1,
-        subject: '한국사1',
+        subject: '통합사회1',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 28,
@@ -80,7 +80,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '공통국어1',
+        subject: '독서 토론과 글쓰기',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 28,
@@ -102,7 +102,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '공통수학1',
+        subject: '자습',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 29,
@@ -112,7 +112,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '자습',
+        subject: '공통영어1',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 29,
@@ -124,7 +124,7 @@ const examData = {
     3: [
       {
         period: 1,
-        subject: '통합과학1',
+        subject: '자습',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 27,
@@ -144,7 +144,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '공통영어1',
+        subject: '공통수학1',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 27,
@@ -156,7 +156,7 @@ const examData = {
     4: [
       {
         period: 1,
-        subject: '독서 토론과 글쓰기',
+        subject: '자습',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 30,
@@ -176,11 +176,43 @@ const examData = {
       },
       {
         period: 3,
-        subject: '통합사회1',
+        subject: '통합과학1',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 30,
         lateness: 0,
+        absence: 1,
+        maxProgress: 0
+      }
+    ],
+    5: [
+      {
+        period: 1,
+        subject: '공통국어1',
+        startTime: '08:50',
+        endTime: '09:40',
+        attendance: 28,
+        lateness: 2,
+        absence: 1,
+        maxProgress: 100
+      },
+      {
+        period: 2,
+        subject: '자습',
+        startTime: '10:10',
+        endTime: '11:00',
+        attendance: 28,
+        lateness: 2,
+        absence: 1,
+        maxProgress: 45
+      },
+      {
+        period: 3,
+        subject: '한국사1',
+        startTime: '11:30',
+        endTime: '12:20',
+        attendance: 28,
+        lateness: 2,
         absence: 1,
         maxProgress: 0
       }
@@ -190,7 +222,7 @@ const examData = {
     1: [
       {
         period: 1,
-        subject: '자습',
+        subject: '생명과학',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 27,
@@ -200,7 +232,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '대수',
+        subject: '미적분 I',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 27,
@@ -210,7 +242,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '사회와 문화',
+        subject: '자습',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 27,
@@ -222,7 +254,7 @@ const examData = {
     2: [
       {
         period: 1,
-        subject: '문학',
+        subject: '화학 I',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 28,
@@ -232,7 +264,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '세계사',
+        subject: '영어 I',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 28,
@@ -242,7 +274,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '물리학',
+        subject: '세계사',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 28,
@@ -254,7 +286,7 @@ const examData = {
     3: [
       {
         period: 1,
-        subject: '한국지리 탐구',
+        subject: '문학 I',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 26,
@@ -264,7 +296,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '미적분 I',
+        subject: '물리학',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 26,
@@ -274,7 +306,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '생명과학',
+        subject: '한국지리 탐구',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 26,
@@ -286,7 +318,7 @@ const examData = {
     4: [
       {
         period: 1,
-        subject: '정치',
+        subject: '대수',
         startTime: '08:50',
         endTime: '09:40',
         attendance: 29,
@@ -296,7 +328,7 @@ const examData = {
       },
       {
         period: 2,
-        subject: '영어 I',
+        subject: '사회와 문화',
         startTime: '10:10',
         endTime: '11:00',
         attendance: 29,
@@ -306,7 +338,7 @@ const examData = {
       },
       {
         period: 3,
-        subject: '화학',
+        subject: '자습',
         startTime: '11:30',
         endTime: '12:20',
         attendance: 29,
@@ -314,13 +346,201 @@ const examData = {
         absence: 1,
         maxProgress: 0
       }
+    ],
+    5: [
+      {
+        period: 1,
+        subject: '정치',
+        startTime: '08:50',
+        endTime: '09:40',
+        attendance: 27,
+        lateness: 1,
+        absence: 2,
+        maxProgress: 100
+      },
+      {
+        period: 2,
+        subject: '인공지능 기초',
+        startTime: '10:10',
+        endTime: '11:00',
+        attendance: 27,
+        lateness: 1,
+        absence: 2,
+        maxProgress: 65
+      },
+      {
+        period: 3,
+        subject: '미디어 영어',
+        startTime: '11:30',
+        endTime: '12:20',
+        attendance: 27,
+        lateness: 1,
+        absence: 2,
+        maxProgress: 0
+      }
     ]
   },
   3: {
-    1: grade3NationalAssessmentSchedule,
-    2: grade3NationalAssessmentSchedule,
-    3: grade3NationalAssessmentSchedule,
-    4: grade3NationalAssessmentSchedule
+    1: [
+      {
+        period: 1,
+        subject: '자습',
+        startTime: '08:50',
+        endTime: '09:40',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 100
+      },
+      {
+        period: 2,
+        subject: '고급 수학 I',
+        startTime: '10:10',
+        endTime: '11:00',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 85
+      },
+      {
+        period: 3,
+        subject: '언어와 매체',
+        startTime: '11:30',
+        endTime: '12:20',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 0
+      }
+    ],
+    2: [
+      {
+        period: 1,
+        subject: '화법과 작문',
+        startTime: '08:50',
+        endTime: '09:40',
+        attendance: 28,
+        lateness: 1,
+        absence: 1,
+        maxProgress: 100
+      },
+      {
+        period: 2,
+        subject: '고급 화학',
+        startTime: '10:10',
+        endTime: '11:00',
+        attendance: 28,
+        lateness: 1,
+        absence: 1,
+        maxProgress: 60
+      },
+      {
+        period: 3,
+        subject: '자습',
+        startTime: '11:30',
+        endTime: '12:20',
+        attendance: 28,
+        lateness: 1,
+        absence: 1,
+        maxProgress: 0
+      }
+    ],
+    3: [
+      {
+        period: 1,
+        subject: '인공지능 수학 / 지구과학 II',
+        startTime: '08:50',
+        endTime: '09:40',
+        attendance: 29,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 100
+      },
+      {
+        period: 2,
+        subject: '영어 독해와 작문',
+        startTime: '10:10',
+        endTime: '11:00',
+        attendance: 29,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 78
+      },
+      {
+        period: 3,
+        subject: '고급 생명과학',
+        startTime: '11:30',
+        endTime: '12:20',
+        attendance: 29,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 0
+      }
+    ],
+    4: [
+      {
+        period: 1,
+        subject: '일본 문화',
+        startTime: '08:50',
+        endTime: '09:40',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 100
+      },
+      {
+        period: 2,
+        subject: '윤리와 사상',
+        startTime: '10:10',
+        endTime: '11:00',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 72
+      },
+      {
+        period: 3,
+        subject: '고급 물리학',
+        startTime: '11:30',
+        endTime: '12:20',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 0
+      }
+    ],
+    5: [
+      {
+        period: 1,
+        subject: '심화 영어 I',
+        startTime: '08:50',
+        endTime: '09:40',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 100
+      },
+      {
+        period: 2,
+        subject: '미적분',
+        startTime: '10:10',
+        endTime: '11:00',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 72
+      },
+      {
+        period: 3,
+        subject: '자습',
+        startTime: '11:30',
+        endTime: '12:20',
+        attendance: 30,
+        lateness: 0,
+        absence: 1,
+        maxProgress: 0
+      }
+    ]
   }
 };
 
